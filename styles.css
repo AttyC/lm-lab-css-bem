@@ -9,10 +9,27 @@ body {
   padding: 10px;
 }
 
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0
+}
+
+.list__item {
+  margin-right:1rem;
+}
+
+.list__item--dark-side:before {
+content: '⚫🤖⚔️'
+}
+
+.list__item--the-force:before {
+content: '⭐🔫👸🏻'
+}
+
 .card {
   padding: 20px;
   margin: 20px;
-  border: 2px var(--battleshipgrey) solid;
   width: fit-content;
 }
 
@@ -28,6 +45,11 @@ body {
 .bg--dark {
   background: var(--dark);
 }
+
+.card__border {
+  border: 2px var(--battleshipgrey) solid;
+}
+
 
 @media screen and (min-width: 700px) {
   body {
