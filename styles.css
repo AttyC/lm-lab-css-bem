@@ -1,7 +1,13 @@
-/* You can delete / re-write this img class  */
-
-img {
-    max-width: 200px;
+:root {
+  --dark: #0D1321;
+  --light: #F2F8F4
 }
 
-/* Happy coding! */
+/* Skin */
+.text--light {
+color: var(--light)
+}
+
+.bg--dark {
+ background: var(--dark)
+}
