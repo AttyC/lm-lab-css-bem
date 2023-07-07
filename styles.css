@@ -1,19 +1,23 @@
 :root {
   --dark: #0d1321;
   --light: #f2f8f4;
+  --battleshipgrey: #a19d99;
 }
 /* Structure */
 
 body {
   padding: 10px;
-
-  @media screen and (min-width: 1000px) {
-    padding: 60px;
-  }
 }
 
-.container {
-    display: flex;
+.card {
+  padding: 20px;
+  margin: 20px;
+  border: 2px var(--battleshipgrey) solid;
+  width: fit-content;
+}
+
+.card__img {
+  max-width: 250px;
 }
 
 /* Skin */
@@ -23,4 +27,17 @@ body {
 
 .bg--dark {
   background: var(--dark);
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    padding: 60px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .card__img {
+    max-width: 350px;
+  }
 }
