@@ -1,13 +1,26 @@
 :root {
-  --dark: #0D1321;
-  --light: #F2F8F4
+  --dark: #0d1321;
+  --light: #f2f8f4;
+}
+/* Structure */
+
+body {
+  padding: 10px;
+
+  @media screen and (min-width: 1000px) {
+    padding: 60px;
+  }
+}
+
+.container {
+    display: flex;
 }
 
 /* Skin */
 .text--light {
-color: var(--light)
+  color: var(--light);
 }
 
 .bg--dark {
- background: var(--dark)
+  background: var(--dark);
 }
