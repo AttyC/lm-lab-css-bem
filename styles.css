@@ -47,8 +47,13 @@ body {
   padding: 20px;
   margin: 20px;
   max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
+.card__header {
+  margin: 1rem;
+}
 .card__img {
   width: -webkit-fill-available;
   margin: 1rem 0;
@@ -105,7 +110,6 @@ body {
 }
 .card__header {
   font-family: 'Star Jedi';
-  font-size: 1.9rem;
 }
 .card__text {
   font-size: 1.15rem;
