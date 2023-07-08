@@ -24,14 +24,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Star Jedi Rounded';
-  src: url('./fonts/StarJediRounded.woff2') format('woff2'),
-    url('./fonts/StarJediRounded.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 /* Structure */
 
 body {
@@ -73,13 +65,20 @@ body {
 }
 
 /* Skin */
-.text--light {
-  color: var(--light);
+
+.bg--millenium-falcon {
+  background: var(--dark);
+  background-image: url(./images/millenium-falcon-star-wars-wallpaper.png);
+  background-repeat: no-repeat;
+  background-position: top;
 }
 .bg--dark {
   background: var(--dark);
 }
 
+.text--light {
+  color: var(--light);
+}
 .page__header {
   font-family: 'Star Jedi Hollow', serif;
   font-size: 3rem;
@@ -95,7 +94,6 @@ body {
   font-family: 'Star Jedi';
   font-size: 1.9rem;
 }
-
 .card__text {
   font-size: 1.15rem;
 }
@@ -114,12 +112,20 @@ body {
 
 @media screen and (min-width: 700px) {
   body {
-    padding: 20px;
+    padding: 0;
+    margin: 0;
   }
   .container {
     display: flex;
     justify-content: space-evenly;
   }
+  .bg--millenium-falcon {
+    background-size: cover;
+  }
+  .page__header--center:hover {
+  transform: perspective(400px) rotateX(-12deg) rotateY(55deg) translateY(-30px);
+  transition: ease-in-out 0.5s;
+}
   .card {
     padding: 20px;
   }
