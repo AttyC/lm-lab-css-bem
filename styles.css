@@ -2,6 +2,34 @@
   --dark: #0d1321;
   --light: #f2f8f4;
   --battleshipgrey: #a19d99;
+  --yellow: #EFCB68;
+}
+
+@font-face {
+  font-family: 'Star Jedi';
+  src: url('./fonts/StarJedi.woff2') format('woff2'),
+    url('./fonts/StarJedi.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Star Jedi Hollow';
+  src: url('./fonts/StarJediHollow.woff2') format('woff2'),
+    url('./fonts/StarJediHollow.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Star Jedi Rounded';
+  src: url('./fonts/StarJediRounded.woff2') format('woff2'),
+    url('./fonts/StarJediRounded.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 /* Structure */
 
@@ -12,22 +40,23 @@ body {
 .list {
   list-style-type: none;
   padding: 0;
-  margin: 0
+  margin: 0;
 }
 
 .list__item {
   margin: 0.5rem 0;
+  font-family: monospace;
 }
 .list__item:before {
   margin-right: 0.5rem;
 }
 
 .list__item--dark-side:before {
-content: '⚫🤖⚔️';
+  content: '⚫🤖⚔️';
 }
 
 .list__item--the-force:before {
-content: '⭐🔫👸🏻'
+  content: '⭐🔫👸🏻';
 }
 
 .card {
@@ -41,10 +70,6 @@ content: '⭐🔫👸🏻'
   margin: 1rem 0;
 }
 
-.card__body {
-  max-width: 250px;
-}
-
 /* Skin */
 .text--light {
   color: var(--light);
@@ -54,16 +79,25 @@ content: '⭐🔫👸🏻'
   background: var(--dark);
 }
 
+.page__header {
+  font-family: 'Star Jedi Hollow', serif;
+  font-size: 3rem;
+  text-shadow: -1px 28px var(--yellow);
+}
+.page__header--center {
+  text-align: center;
+}
 .card__border {
   border: 2px var(--battleshipgrey) solid;
 }
 
 .card__header {
+  font-family: 'Star Jedi';
   font-size: 1.9rem;
 }
 
 .card__text {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -75,15 +109,15 @@ content: '⭐🔫👸🏻'
     justify-content: space-evenly;
   }
   .card {
-    padding: 40px;
+    padding: 30px;
   }
   .card__img {
     max-width: 350px;
   }
   .card__header {
-  font-size: 2.25rem;
-}
+    font-size: 2.25rem;
+  }
   .card__text {
-  font-size: 1.5rem;
-}
+    font-size: 1.3rem;
+  }
 }
