@@ -16,11 +16,14 @@ body {
 }
 
 .list__item {
-  margin-right:1rem;
+  margin: 0.5rem 0;
+}
+.list__item:before {
+  margin-right: 0.5rem;
 }
 
 .list__item--dark-side:before {
-content: '⚫🤖⚔️'
+content: '⚫🤖⚔️';
 }
 
 .list__item--the-force:before {
@@ -30,10 +33,15 @@ content: '⭐🔫👸🏻'
 .card {
   padding: 20px;
   margin: 20px;
-  width: fit-content;
+  max-width: 350px;
 }
 
 .card__img {
+  width: -webkit-fill-available;
+  margin: 1rem 0;
+}
+
+.card__body {
   max-width: 250px;
 }
 
@@ -50,6 +58,13 @@ content: '⭐🔫👸🏻'
   border: 2px var(--battleshipgrey) solid;
 }
 
+.card__header {
+  font-size: 1.9rem;
+}
+
+.card__text {
+  font-size: 1.25rem;
+}
 
 @media screen and (min-width: 700px) {
   body {
@@ -59,7 +74,16 @@ content: '⭐🔫👸🏻'
     display: flex;
     justify-content: space-evenly;
   }
+  .card {
+    padding: 40px;
+  }
   .card__img {
     max-width: 350px;
   }
+  .card__header {
+  font-size: 2.25rem;
+}
+  .card__text {
+  font-size: 1.5rem;
+}
 }
