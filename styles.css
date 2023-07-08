@@ -48,6 +48,7 @@ body {
   margin: 0.5rem 0;
   font-family: monospace;
 }
+
 .list__item:before {
   margin-right: 0.5rem;
 }
@@ -78,6 +79,7 @@ body {
 .bg--dark {
   background: var(--dark);
 }
+
 .page__header {
   font-family: 'Star Jedi Hollow', serif;
   font-size: 3rem;
@@ -89,7 +91,6 @@ body {
 .card__border {
   border: 2px var(--battleshipgrey) solid;
 }
-
 .card__header {
   font-family: 'Star Jedi';
   font-size: 1.9rem;
@@ -98,7 +99,6 @@ body {
 .card__text {
   font-size: 1.15rem;
 }
-
 .card__body--force {
   background: var(--force);
   color: var(--dark);
@@ -114,17 +114,14 @@ body {
 
 @media screen and (min-width: 700px) {
   body {
-    padding: 60px;
+    padding: 20px;
   }
   .container {
     display: flex;
     justify-content: space-evenly;
   }
   .card {
-    padding: 30px;
-  }
-  .card__img {
-    max-width: 350px;
+    padding: 20px;
   }
   .card__header {
     font-size: 2.25rem;
@@ -136,6 +133,12 @@ body {
     transform: scale(1.1);
     transition: ease-in-out 0.3s;
   }
+  .card__border--darkside {
+    box-shadow: unset;
+  }
+  .card__border--force {
+    box-shadow: unset;
+  }
   .card__body--darkside:hover {
     box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px red,
       0 0 25px red;
@@ -143,5 +146,11 @@ body {
   .card__body--force:hover {
     box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px lime,
       0 0 25px lime;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .card {
+    padding: 30px;
   }
 }
